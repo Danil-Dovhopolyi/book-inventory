@@ -1,13 +1,13 @@
-# Project Name
+# Book Inventory
 
-This project is created for ...
+This project it's test task in company
 
 ## Installation and Setup
 
 1. Clone the repository:
 
     ```bash
-    git clone <repository link>
+    git clone https://github.com/Danil-Dovhopolyi/book-inventory.git
     ```
 
 2. Install dependencies:
@@ -42,4 +42,4 @@ This project is created for ...
         npm run dev
         ```
 
-6. Open a web browser and navigate to the link displayed in the terminal where the server is running:
+6. Open a web browser and navigate to the link displayed in the terminal where the server is running(terminal, where you wrote php artisan serve):
