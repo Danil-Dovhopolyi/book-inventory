@@ -9,22 +9,13 @@ use App\Http\Livewire\Auth\Passwords\Reset;
 use App\Http\Livewire\Auth\Register;
 use App\Http\Livewire\Auth\Verify;
 use Illuminate\Support\Facades\Route;
+use App\Http\Livewire\BookList;
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
 
-Route::view('/', 'welcome')->name('home');
+Route::get('/home', BookList::class)->name('home');
 
 Route::middleware('guest')->group(function () {
-    Route::get('login', Login::class)
+    Route::get('/', Login::class)
         ->name('login');
 
     Route::get('register', Register::class)
@@ -41,7 +32,7 @@ Route::middleware('auth')->group(function () {
     Route::get('email/verify', Verify::class)
         ->middleware('throttle:6,1')
         ->name('verification.notice');
-
+    Route::post('/logout', 'Auth\LoginController@logout')->name('logout');
     Route::get('password/confirm', Confirm::class)
         ->name('password.confirm');
 });
@@ -54,3 +45,4 @@ Route::middleware('auth')->group(function () {
     Route::post('logout', LogoutController::class)
         ->name('logout');
 });
+
