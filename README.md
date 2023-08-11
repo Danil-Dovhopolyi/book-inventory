@@ -51,3 +51,5 @@ The admin panel can be accessed at the following URL: `locahost:8000/admin`
 **Default User**:
 
 The default password for the user is: `password`
+
+Note: For quicker setup, a `.env` file has been included in the project.
