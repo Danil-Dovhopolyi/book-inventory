@@ -12,6 +12,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Livewire\BookList;
 
 
+
 Route::get('/home', BookList::class)->name('home');
 
 Route::middleware('guest')->group(function () {
@@ -45,4 +46,3 @@ Route::middleware('auth')->group(function () {
     Route::post('logout', LogoutController::class)
         ->name('logout');
 });
-

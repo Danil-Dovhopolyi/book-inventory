@@ -1,6 +1,15 @@
 # Book Inventory
 
-This project it's test task in company
+This project is a test task for a company.
+
+## Requirements
+
+Before you begin, make sure you have the following software installed:
+
+-   [Node.js](https://nodejs.org/)
+-   [npm](https://www.npmjs.com/)
+-   [PHP](https://www.php.net/)
+-   [Composer](https://getcomposer.org/)
 
 ## Installation and Setup
 
@@ -10,10 +19,11 @@ This project it's test task in company
     git clone https://github.com/Danil-Dovhopolyi/book-inventory.git
     ```
 
-2. Install dependencies:
+2. Install project dependencies:
 
     ```bash
     npm install
+    composer install
     ```
 
 3. Run database migrations:
@@ -42,4 +52,6 @@ This project it's test task in company
         npm run dev
         ```
 
-6. Open a web browser and navigate to the link displayed in the terminal where the server is running(terminal, where you wrote php artisan serve):
+6. Open a web browser and navigate to the link displayed in the terminal where the server is running.
+
+Make sure you have all the required software installed before proceeding with the installation steps.

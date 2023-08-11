@@ -15,6 +15,7 @@ use Illuminate\Database\Eloquent\SoftDeletingScope;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Components\DatePicker;
 use Filament\Tables\Columns\TextColumn;
+use App\Rules\IsbnValidationRule;
 
 
 class BookResource extends Resource
@@ -26,13 +27,22 @@ class BookResource extends Resource
     public static function form(Form $form): Form
     {
         return $form
-            ->schema([
-                TextInput::make('title'),
-                TextInput::make('author'),
-                TextInput::make('publisher'),
-                TextInput::make('isbn'),
-               DatePicker::make('publication_year')
-            ]);
+     ->schema([
+            TextInput::make('title')
+                ->rules('required', 'max:100'),
+                
+            TextInput::make('author')
+                ->rules('nullable', 'max:255'),
+                
+            TextInput::make('publisher')
+                ->rules('required', 'max:100'),
+                
+            TextInput::make('isbn')
+                ->rules(['required', 'unique:books', new IsbnValidationRule]),
+                
+            DatePicker::make('publication_year')
+                ->rules('nullable', 'integer', 'min:0', 'max:' . date('Y')),
+        ]);
     }
 
     public static function table(Table $table): Table
@@ -45,9 +55,7 @@ class BookResource extends Resource
                 TextColumn::make('isbn')->searchable(),
                 TextColumn::make('publication_year')->searchable(),
             ])
-            ->filters([
-                //
-            ])
+            ->filters([])
             ->actions([
                 Tables\Actions\EditAction::make(),
             ])
@@ -58,9 +66,7 @@ class BookResource extends Resource
     
     public static function getRelations(): array
     {
-        return [
-            //
-        ];
+        return [];
     }
     
     public static function getPages(): array

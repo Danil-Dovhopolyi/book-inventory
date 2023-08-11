@@ -11,24 +11,22 @@ class BooksTableSeeder extends Seeder
     /**
      * Run the database seeds.
      */
-  // BooksTableSeeder.php
 public function run()
-    {
+      {
         Book::create([
-            'title' => 'Book 1',
-            'author' => 'Author 1',
-            'publication_year' => 2022,
-            'publisher' => 'Publisher 1',
-            'isbn' => '1234567890'
+            'title' => 'The Great Gatsby',
+            'author' => 'F. Scott Fitzgerald',
+            'publication_year' => 1925,
+            'publisher' => 'Charles Scribner\'s Sons',
+            'isbn' => '978-0-7432-7356-5',
         ]);
 
         Book::create([
-            'title' => 'Book 2',
-            'author' => 'Author 2',
-            'publication_year' => 2023,
-            'publisher' => 'Publisher 2',
-            'isbn' => '2345678901'
+            'title' => 'To Kill a Mockingbird',
+            'author' => 'Harper Lee',
+            'publication_year' => 1960,
+            'publisher' => 'J. B. Lippincott & Co.',
+            'isbn' => '978-0-06-112008-4',
         ]);
-
     }
 }
