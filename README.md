@@ -35,11 +35,11 @@ Before you begin, make sure you have the following software installed:
     Open the newly created `.env` file in a text editor. Locate the section that specifies database connection settings and update it according to your environment:
 
     ```dotenv
-        DB_CONNECTION=sqlite
-        DB_HOST=127.0.0.1
-        DB_PORT=3306
-        DB_USERNAME=root
-        DB_PASSWORD=
+    DB_CONNECTION=sqlite
+    DB_HOST=127.0.0.1
+    DB_PORT=3306
+    DB_USERNAME=root
+    DB_PASSWORD=
     ```
 
 5. **Generate Application Key**:
@@ -87,3 +87,11 @@ Before you begin, make sure you have the following software installed:
 9. **Open a Web Browser**:
 
     Navigate to the link displayed in the terminal where the server is running (the terminal where you ran `php artisan serve`).
+
+**Admin Panel**:
+
+The admin panel can be accessed at the following URL: `locahost:8000/admin`
+
+**Default User**:
+
+The default password for the user is: `password`
