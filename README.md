@@ -13,32 +13,66 @@ Before you begin, make sure you have the following software installed:
 
 ## Installation and Setup
 
-1. Clone the repository:
+1. **Clone the Repository**:
 
     ```bash
     git clone https://github.com/Danil-Dovhopolyi/book-inventory.git
     ```
 
-2. Install project dependencies:
+2. **Install Dependencies**:
 
     ```bash
     npm install
     composer install
     ```
 
-3. Run database migrations:
+3. **Copy `.env.example` File**:
+
+    In the root directory of your project, find a file named `.env.example`. Make a copy of this file and rename it to `.env`.
+
+4. **Update Database Connection Settings**:
+
+    Open the newly created `.env` file in a text editor. Locate the section that specifies database connection settings and update it according to your environment:
+
+    ```dotenv
+        DB_CONNECTION=sqlite
+        DB_HOST=127.0.0.1
+        DB_PORT=3306
+        DB_USERNAME=root
+        DB_PASSWORD=
+    ```
+
+    Replace `your_database_name`, `your_database_username`, and `your_database_password` with your actual database credentials.
+
+5. **Generate Application Key**:
+
+    In the `.env` file, you'll find an entry for the application key:
+
+    ```dotenv
+    APP_KEY=
+    ```
+
+    Generate a new application key by running the following command in your terminal:
+
+    ```bash
+    php artisan key:generate
+    ```
+
+    This command will generate a random key and update the `APP_KEY` value in your `.env` file.
+
+6. **Run Database Migrations**:
 
     ```bash
     php artisan migrate
     ```
 
-4. Seed users and books:
+7. **Seed Users and Books**:
 
     ```bash
     php artisan db:seed
     ```
 
-5. Open two terminals:
+8. **Open Two Terminals**:
 
     - In the first terminal, start the server:
 
@@ -52,6 +86,6 @@ Before you begin, make sure you have the following software installed:
         npm run dev
         ```
 
-6. Open a web browser and navigate to the link displayed in the terminal where the server is running.
+9. **Open a Web Browser**:
 
-Make sure you have all the required software installed before proceeding with the installation steps.
+    Navigate to the link displayed in the terminal where the server is running (the terminal where you ran `php artisan serve`).
