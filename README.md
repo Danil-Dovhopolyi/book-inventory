@@ -42,8 +42,6 @@ Before you begin, make sure you have the following software installed:
         DB_PASSWORD=
     ```
 
-    Replace `your_database_name`, `your_database_username`, and `your_database_password` with your actual database credentials.
-
 5. **Generate Application Key**:
 
     In the `.env` file, you'll find an entry for the application key:
