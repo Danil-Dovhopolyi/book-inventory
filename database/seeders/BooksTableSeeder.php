@@ -18,7 +18,7 @@ public function run()
             'author' => 'F. Scott Fitzgerald',
             'publication_year' => 1925,
             'publisher' => 'Charles Scribner\'s Sons',
-            'isbn' => '978-0-7432-7356-5',
+            'isbn' => '9780743273565',
         ]);
 
         Book::create([
@@ -26,7 +26,7 @@ public function run()
             'author' => 'Harper Lee',
             'publication_year' => 1960,
             'publisher' => 'J. B. Lippincott & Co.',
-            'isbn' => '978-0-06-112008-4',
+            'isbn' => '9780061120084',
         ]);
     }
 }

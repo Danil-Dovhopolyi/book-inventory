@@ -38,7 +38,7 @@ class BookResource extends Resource
                 ->rules('required', 'max:100'),
                 
             TextInput::make('isbn')
-                ->rules(['required', 'unique:books', new IsbnValidationRule]),
+                ->rules(['required',  new IsbnValidationRule]),
                 
             DatePicker::make('publication_year')
                 ->rules('nullable', 'integer', 'min:0', 'max:' . date('Y')),
